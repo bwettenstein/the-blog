@@ -16,11 +16,15 @@ exports.getAllMessages = (req, res, next) => {
 // Render the message and the comments that it matches to.
 // Also renders the form for users to make comments
 exports.getMessage = async (req, res, next) => {
-  const messageId = req.params.id;
-  const commentList = await Comment.find({});
-  const message = await Message.findById(messageId);
-  if (!message || !commentList) return next(err);
-  return res.render('message', { message: message, commentList });
+  try {
+    const messageId = req.params.id;
+    const commentList = await Comment.find({}).catch;
+    const message = await Message.findById(messageId);
+    if (!message || !commentList) return next(err);
+    return res.render('message', { message: message, commentList });
+  } catch (err) {
+    return next(err);
+  }
 };
 
 // Validates the comment form fields.
