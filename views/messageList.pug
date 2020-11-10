@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    .message-list-container 
+        if messageList 
+            for message in messageList
+                .message-container.flex-center.flex-column.margin-left-right-small
+                     a(href=message.url).margin-top-bottom=message.title
+                     .message-author-date
+                        p.message-author.margin-top-bottom-small By Admin
+                        p.message-timestamp.margin-top-bottom-small=message.timestamp
+        else 
+            h1 There are no messages

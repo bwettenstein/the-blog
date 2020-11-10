@@ -1,0 +1,184 @@
+@import 'utilities.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --white: #fff;
+  --fb-blue: #3b5998;
+  --turquoise: #004c66;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #d3d3d3;
+}
+
+a {
+  /* color: #00b7ff; */
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+a:focus {
+  outline: none;
+}
+
+nav {
+  /* position: sticky; */
+  color: var(--white);
+  background: var(--turquoise);
+  padding: 1rem;
+  min-height: 5vh;
+  height: auto;
+  max-height: 10vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-left h1 {
+  font-size: 2.5rem;
+}
+
+.nav-left h1,
+.nav-right h1 {
+  color: var(--white);
+}
+
+.center-container {
+  height: 100vh;
+  width: 100vw;
+  /* Background might change to white instead of light */
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+input {
+  height: 2rem;
+  width: 15rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.homepage-container {
+  /* height: 100vh; */
+  /* grid-template-rows: 4fr 5fr 1fr; */
+}
+.center-img-container,
+.recent-message-container,
+.footer-container {
+  height: 100%;
+  width: 100%;
+}
+
+.center-img-container {
+  min-height: 50vh;
+  max-height: 60vh;
+  height: auto;
+  background: url('../images/homepage.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.center-img-text {
+  margin-bottom: 4rem;
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.recent-message-container {
+  min-height: 30vh;
+  max-height: 40vh;
+  height: auto;
+}
+
+.recent-message-header {
+  font-size: 1rem;
+  text-align: start;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.recent-message-text-container {
+  width: 100%;
+  min-height: 15vh;
+  max-height: 20vh;
+  height: auto;
+}
+
+.recent-message-text-container a {
+  font-size: 2rem;
+}
+
+.recent-message-text-container p {
+  font-size: 1.5rem;
+}
+
+.footer-container {
+  min-height: 10vh;
+  max-height: 15vh;
+  height: auto;
+  width: 100%;
+}
+
+.message-container {
+  border: solid 1px #333;
+  min-height: 10vh;
+  max-height: 15vh;
+  height: auto;
+}
+
+.message-url-container {
+  min-height: 15vh;
+  max-height: 40vh;
+  height: auto;
+  border-bottom: solid 2px #333;
+}
+
+.message-url-container a {
+  font-size: 3rem;
+}
+
+.message-url-container .message-author {
+  font-size: 2rem;
+}
+
+.message-url-container .message-text,
+.comment-container p {
+  font-size: 1.25rem;
+}
+
+.comment-list-container {
+  border-bottom: solid 2px #333;
+}
+
+.comment-list-container h1 {
+  font-size: 2.5rem;
+}
+
+.comment-container h1 {
+  font-size: 1.5rem;
+}
+
+.comment-container p {
+  font-size: 1.25rem;
+}
+
+.comment-container p span {
+  font-weight: 700;
+}

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .homepage-container.flex-center.flex-column
+    .center-img-container.border-solid.flex-center.justify-center
+      .center-img-text
+        h1 Thoughts. Published.
+    .recent-message-container.border-solid.flex-center.flex-column
+      h1.recent-message-header.justify-center.margin-top-bottom-small Recent Message
+      if newestMessage
+        .recent-message-text-container.margin-top-bottom
+          a(href=newestMessage.url).newestMessageTitle.margin-top-bottom=newestMessage.title
+          p=newestMessage.text
+    .footer-container.border-solid.flex-center.justify-center
+      h1 Lorem Ipsum
