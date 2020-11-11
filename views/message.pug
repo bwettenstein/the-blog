@@ -6,16 +6,19 @@ block content
             p.message-author.margin-top-bottom-small By Admin
             p.message-text.margin-top-bottom=message.text
             p.message-timestamp.margin-top-bottom-small=message.timestamp
-    if commentList
+    if commentList && (commentList.length !== 0)
         .comment-list-container.flex-center.flex-column.margin-top-bottom
-            h1 Comments
+            h1.margin-top-bottom-small Comments
             for comment in commentList
                 .comment-container.margin-top-bottom
                     h1=comment.body
                     p By 
                         span.comment-name=comment.name
+                        span.timestamp.margin-left-right=comment.formattedTimestamp
+                    
+                    
     else 
-        h1.margin-top-bottom There are no comments...
+        h1.margin-top-bottom.margin-left-right There are no comments...
     .form-container.flex-center.flex-column.margin-top-bottom 
         h1.margin-top-bottom-small Leave a comment
         form(method="POST" action="").flex-center.flex-column

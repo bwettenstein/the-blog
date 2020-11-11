@@ -179,6 +179,10 @@ input:focus {
   font-size: 1.25rem;
 }
 
-.comment-container p span {
+.comment-name {
   font-weight: 700;
+}
+
+.timestamp {
+  font-weight: normal;
 }
