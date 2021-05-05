@@ -131,7 +131,7 @@ input:focus {
 
 .footer-container {
   min-height: 10vh;
-  max-height: 20vh;
+  max-height: 15vh;
   height: auto;
   width: 100%;
 }
