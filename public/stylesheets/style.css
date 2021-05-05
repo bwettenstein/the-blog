@@ -139,7 +139,7 @@ input:focus {
 .message-container {
   border: solid 1px #333;
   min-height: 10vh;
-  max-height: 15vh;
+  max-height: 20vh;
   height: auto;
 }
 
